@@ -1,0 +1,122 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.bit</groupId>
+        <artifactId>bit-cloud-plus</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bit-auth</artifactId>
+
+    <description>
+        bit-auth 认证授权中心
+    </description>
+
+    <dependencies>
+
+        <!-- SpringCloud Alibaba Nacos -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <!-- SpringCloud Alibaba Nacos Config -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bit</groupId>
+            <artifactId>bit-common-sentinel</artifactId>
+        </dependency>
+
+        <!-- Bit Common Security-->
+        <dependency>
+            <groupId>com.bit</groupId>
+            <artifactId>bit-common-security</artifactId>
+        </dependency>
+
+        <!-- Bit Common Log -->
+        <dependency>
+            <groupId>com.bit</groupId>
+            <artifactId>bit-common-log</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bit</groupId>
+            <artifactId>bit-common-doc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bit</groupId>
+            <artifactId>bit-common-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bit</groupId>
+            <artifactId>bit-common-dubbo</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bit</groupId>
+            <artifactId>bit-common-seata</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.bit</groupId>
+            <artifactId>bit-common-tenant</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.bit</groupId>
+                    <artifactId>bit-common-mybatis</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- 自定义负载均衡(多团队开发使用) -->
+<!--        <dependency>-->
+<!--            <groupId>com.bit</groupId>-->
+<!--            <artifactId>bit-common-loadbalancer</artifactId>-->
+<!--        </dependency>-->
+
+        <!-- ELK 日志收集 -->
+<!--        <dependency>-->
+<!--            <groupId>com.bit</groupId>-->
+<!--            <artifactId>bit-common-logstash</artifactId>-->
+<!--        </dependency>-->
+
+        <!-- skywalking 日志收集 -->
+<!--        <dependency>-->
+<!--            <groupId>com.bit</groupId>-->
+<!--            <artifactId>bit-common-skylog</artifactId>-->
+<!--        </dependency>-->
+
+        <!-- prometheus 监控 -->
+<!--        <dependency>-->
+<!--            <groupId>com.bit</groupId>-->
+<!--            <artifactId>bit-common-prometheus</artifactId>-->
+<!--        </dependency>-->
+
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

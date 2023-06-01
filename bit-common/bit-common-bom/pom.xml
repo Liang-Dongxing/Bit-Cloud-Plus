@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.bit</groupId>
+    <artifactId>bit-common-bom</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <description>
+        bit-common-bom common依赖项
+    </description>
+
+    <properties>
+        <revision>2.0.0-SNAPSHOT</revision>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 核心模块 -->
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-core</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 接口模块 -->
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-doc</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 安全模块 -->
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-security</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-satoken</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 日志记录 -->
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-log</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 字典 -->
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-dict</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- excel -->
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-excel</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 缓存服务 -->
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-redis</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- web服务 -->
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-web</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 数据库服务 -->
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-mybatis</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-job</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-dubbo</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-seata</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-loadbalancer</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-oss</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-idempotent</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-mail</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-sms</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-logstash</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-elasticsearch</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-sentinel</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-skylog</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-prometheus</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-translation</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 脱敏模块 -->
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-sensitive</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 序列化模块 -->
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-json</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-encrypt</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- 租户模块 -->
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-tenant</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-websocket</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+</project>

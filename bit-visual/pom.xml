@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.bit</groupId>
+        <artifactId>bit-cloud-plus</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <modules>
+        <module>bit-monitor</module>
+        <module>bit-xxl-job-admin</module>
+        <module>bit-sentinel-dashboard</module>
+        <module>bit-seata-server</module>
+        <module>bit-nacos</module>
+    </modules>
+
+    <artifactId>bit-visual</artifactId>
+    <packaging>pom</packaging>
+
+    <description>
+        bit-visual图形化管理模块
+    </description>
+
+    <dependencies>
+        <!-- ELK 日志收集 -->
+<!--        <dependency>-->
+<!--            <groupId>com.bit</groupId>-->
+<!--            <artifactId>bit-common-logstash</artifactId>-->
+<!--        </dependency>-->
+
+        <!-- skywalking 日志收集 -->
+<!--        <dependency>-->
+<!--            <groupId>com.bit</groupId>-->
+<!--            <artifactId>bit-common-skylog</artifactId>-->
+<!--        </dependency>-->
+
+        <!-- prometheus 监控 -->
+<!--        <dependency>-->
+<!--            <groupId>com.bit</groupId>-->
+<!--            <artifactId>bit-common-prometheus</artifactId>-->
+<!--        </dependency>-->
+    </dependencies>
+
+</project>

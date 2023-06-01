@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.dromara</groupId>
-    <artifactId>ruoyi-cloud-plus</artifactId>
+    <groupId>com.bit</groupId>
+    <artifactId>bit-cloud-plus</artifactId>
     <version>${revision}</version>
 
-    <name>RuoYi-Cloud-Plus</name>
-    <url>https://gitee.com/dromara/RuoYi-Cloud-Plus</url>
-    <description>RuoYi-Cloud-Plus微服务系统</description>
+    <name>Bit-Cloud-Plus</name>
+    <url>https://gitee.com/dromara/bit-Cloud-Plus</url>
+    <description>Bit-Cloud-Plus微服务系统</description>
 
     <properties>
         <revision>2.0.0-SNAPSHOT</revision>
@@ -110,8 +110,8 @@
 
             <!-- SpringCloud Alibaba 微服务 -->
             <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-common-alibaba-bom</artifactId>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-alibaba-bom</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -137,8 +137,8 @@
 
             <!-- common 的依赖配置-->
             <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-common-bom</artifactId>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-common-bom</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -146,8 +146,8 @@
 
             <!-- api 的依赖配置-->
             <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-api-bom</artifactId>
+                <groupId>com.bit</groupId>
+                <artifactId>bit-api-bom</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -382,13 +382,13 @@
     </dependencyManagement>
 
     <modules>
-        <module>ruoyi-auth</module>
-        <module>ruoyi-gateway</module>
-        <module>ruoyi-visual</module>
-        <module>ruoyi-modules</module>
-        <module>ruoyi-api</module>
-        <module>ruoyi-common</module>
-        <module>ruoyi-example</module>
+        <module>bit-auth</module>
+        <module>bit-gateway</module>
+        <module>bit-visual</module>
+        <module>bit-modules</module>
+        <module>bit-api</module>
+        <module>bit-common</module>
+        <module>bit-example</module>
     </modules>
     <packaging>pom</packaging>
 
