@@ -6,7 +6,7 @@ server:
 spring:
   application:
     # 应用名称
-    name: ruoyi-xxl-job-admin
+    name: bit-xxl-job-admin
   profiles:
     # 环境配置
     active: @profiles.active@

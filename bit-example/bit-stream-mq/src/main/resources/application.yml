@@ -5,7 +5,7 @@ server:
 spring:
   application:
     # 应用名称
-    name: ruoyi-stream-mq
+    name: bit-stream-mq
   profiles:
     # 环境配置
     active: @profiles.active@

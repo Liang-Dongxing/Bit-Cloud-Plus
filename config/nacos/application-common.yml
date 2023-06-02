@@ -55,7 +55,7 @@ dubbo:
     check: false
   scan:
     # 接口实现类扫描
-    base-packages: org.dromara.**.dubbo
+    base-packages: com.bit.**.dubbo
   # 自定义配置
   custom:
     # 全局请求log
@@ -99,7 +99,7 @@ spring:
       transport:
         # dashboard控制台服务名 用于服务发现
         # 如无此配置将默认使用下方 dashboard 配置直接注册
-        server-name: ruoyi-sentinel-dashboard
+        server-name: bit-sentinel-dashboard
         # 客户端指定注册的ip 用于多网卡ip不稳点使用
         # client-ip:
         # 控制台地址 从1.3.0开始使用 server-name 注册
@@ -196,11 +196,11 @@ sa-token:
 mybatis-plus:
   # 不支持多包, 如有需要可在注解配置 或 提升扫包等级
   # 例如 com.**.**.mapper
-  mapperPackage: org.dromara.**.mapper
+  mapperPackage: com.bit.**.mapper
   # 对应的 XML 文件位置
   mapperLocations: classpath*:mapper/**/*Mapper.xml
   # 实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: org.dromara.**.domain
+  typeAliasesPackage: com.bit.**.domain
   # 启动时是否检查 MyBatis XML 文件的存在，默认不检查
   checkConfigLocation: false
   configuration:
@@ -249,16 +249,16 @@ mybatis-encryptor:
 swagger:
   info:
     # 标题
-    title: '标题：RuoYi-Cloud-Plus微服务权限管理系统_接口文档'
+    title: '标题：Bit-Cloud-Plus微服务权限管理系统_接口文档'
     # 描述
     description: '描述：微服务权限管理系统, 具体包括XXX,XXX模块...'
     # 版本
     version: '版本号：系统版本...'
     # 作者信息
     contact:
-      name: Lion Li
-      email: crazylionli@163.com
-      url: https://gitee.com/dromara/RuoYi-Cloud-Plus
+      name: LiangDongXing
+      email: LiangDongXing.cn@outlook.com
+      url: https://github.com/Liang-Dongxing/Bit-Boot-Plus
   components:
     # 鉴权方式配置
     security-schemes:
@@ -293,7 +293,7 @@ seata:
   registry:
     type: nacos
     nacos:
-      application: ruoyi-seata-server
+      application: bit-seata-server
       server-addr: ${spring.cloud.nacos.server-addr}
       group: ${spring.cloud.nacos.discovery.group}
       namespace: ${spring.profiles.active}

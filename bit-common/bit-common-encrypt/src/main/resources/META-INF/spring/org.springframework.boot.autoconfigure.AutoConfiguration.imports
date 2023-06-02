@@ -1,1 +1,1 @@
-org.dromara.common.encrypt.config.EncryptorAutoConfiguration
+com.bit.common.encrypt.config.EncryptorAutoConfiguration

@@ -1,5 +1,5 @@
-org.dromara.common.translation.config.TranslationConfig
-org.dromara.common.translation.core.impl.DeptNameTranslationImpl
-org.dromara.common.translation.core.impl.DictTypeTranslationImpl
-org.dromara.common.translation.core.impl.OssUrlTranslationImpl
-org.dromara.common.translation.core.impl.UserNameTranslationImpl
+com.bit.common.translation.config.TranslationConfig
+com.bit.common.translation.core.impl.DeptNameTranslationImpl
+com.bit.common.translation.core.impl.DictTypeTranslationImpl
+com.bit.common.translation.core.impl.OssUrlTranslationImpl
+com.bit.common.translation.core.impl.UserNameTranslationImpl

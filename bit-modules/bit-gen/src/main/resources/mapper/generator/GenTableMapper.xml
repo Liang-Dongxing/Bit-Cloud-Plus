@@ -2,20 +2,20 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.dromara.gen.mapper.GenTableMapper">
+<mapper namespace="com.bit.gen.mapper.GenTableMapper">
 
     <!-- 多结构嵌套自动映射需带上每个实体的主键id 否则映射会失败 -->
-    <resultMap type="org.dromara.gen.domain.GenTable" id="GenTableResult">
+    <resultMap type="com.bit.gen.domain.GenTable" id="GenTableResult">
         <id property="tableId" column="table_id" />
         <collection property="columns" javaType="java.util.List" resultMap="GenTableColumnResult" />
     </resultMap>
 
-    <resultMap type="org.dromara.gen.domain.GenTableColumn" id="GenTableColumnResult">
+    <resultMap type="com.bit.gen.domain.GenTableColumn" id="GenTableColumnResult">
         <id property="columnId" column="column_id"/>
     </resultMap>
 
     <select id="selectPageDbTableList" resultMap="GenTableResult">
-        <if test="@org.dromara.common.mybatis.helper.DataBaseHelper@isMySql()">
+        <if test="@com.bit.common.mybatis.helper.DataBaseHelper@isMySql()">
             select table_name, table_comment, create_time, update_time
             from information_schema.tables
             where table_schema = (select database())
@@ -34,7 +34,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             </if>
             order by create_time desc
         </if>
-        <if test="@org.dromara.common.mybatis.helper.DataBaseHelper@isOracle()">
+        <if test="@com.bit.common.mybatis.helper.DataBaseHelper@isOracle()">
             select lower(dt.table_name) as table_name, dtc.comments as table_comment, uo.created as create_time, uo.last_ddl_time as update_time
             from user_tables dt, user_tab_comments dtc, user_objects uo
             where dt.table_name = dtc.table_name
@@ -55,7 +55,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             </if>
             order by create_time desc
         </if>
-        <if test="@org.dromara.common.mybatis.helper.DataBaseHelper@isPostgerSql()">
+        <if test="@com.bit.common.mybatis.helper.DataBaseHelper@isPostgerSql()">
             select table_name, table_comment, create_time, update_time
             from (
                 SELECT c.relname AS table_name,
@@ -87,7 +87,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </select>
 
     <select id="selectDbTableListByNames" resultMap="GenTableResult">
-        <if test="@org.dromara.common.mybatis.helper.DataBaseHelper@isMySql()">
+        <if test="@com.bit.common.mybatis.helper.DataBaseHelper@isMySql()">
             select table_name, table_comment, create_time, update_time from information_schema.tables
             where table_name NOT LIKE 'xxl_job_%' and table_name NOT LIKE 'gen_%' and table_schema = (select database())
             and table_name in
@@ -95,7 +95,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
                  #{name}
             </foreach>
         </if>
-        <if test="@org.dromara.common.mybatis.helper.DataBaseHelper@isOracle()">
+        <if test="@com.bit.common.mybatis.helper.DataBaseHelper@isOracle()">
             select lower(dt.table_name) as table_name, dtc.comments as table_comment, uo.created as create_time, uo.last_ddl_time as update_time
             from user_tables dt, user_tab_comments dtc, user_objects uo
             where dt.table_name = dtc.table_name
@@ -107,7 +107,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
                 #{name}
             </foreach>
         </if>
-        <if test="@org.dromara.common.mybatis.helper.DataBaseHelper@isPostgerSql()">
+        <if test="@com.bit.common.mybatis.helper.DataBaseHelper@isPostgerSql()">
             select table_name, table_comment, create_time, update_time
             from (
                 SELECT c.relname AS table_name,
@@ -130,12 +130,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </select>
 
     <select id="selectTableByName" parameterType="String" resultMap="GenTableResult">
-        <if test="@org.dromara.common.mybatis.helper.DataBaseHelper@isMySql()">
+        <if test="@com.bit.common.mybatis.helper.DataBaseHelper@isMySql()">
             select table_name, table_comment, create_time, update_time from information_schema.tables
             where table_name NOT LIKE 'xxl_job_%' and table_name NOT LIKE 'gen_%' and table_schema = (select database())
             and table_name = #{tableName}
         </if>
-        <if test="@org.dromara.common.mybatis.helper.DataBaseHelper@isOracle()">
+        <if test="@com.bit.common.mybatis.helper.DataBaseHelper@isOracle()">
             select lower(dt.table_name) as table_name, dtc.comments as table_comment, uo.created as create_time, uo.last_ddl_time as update_time
             from user_tables dt, user_tab_comments dtc, user_objects uo
             where dt.table_name = dtc.table_name
@@ -145,7 +145,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             AND dt.table_name NOT IN (select table_name from gen_table)
             and lower(dt.table_name) = #{tableName}
         </if>
-        <if test="@org.dromara.common.mybatis.helper.DataBaseHelper@isPostgerSql()">
+        <if test="@com.bit.common.mybatis.helper.DataBaseHelper@isPostgerSql()">
             select table_name, table_comment, create_time, update_time
             from (
                 SELECT c.relname AS table_name,

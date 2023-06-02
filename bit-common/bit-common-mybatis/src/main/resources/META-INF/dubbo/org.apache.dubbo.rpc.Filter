@@ -1,1 +1,1 @@
-dubboDataPermissionFilter=org.dromara.common.mybatis.filter.DubboDataPermissionFilter
+dubboDataPermissionFilter=com.bit.common.mybatis.filter.DubboDataPermissionFilter
