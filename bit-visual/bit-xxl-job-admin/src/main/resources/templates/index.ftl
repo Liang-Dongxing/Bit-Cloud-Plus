@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  	<#import "./common/common.macro.ftl" as netCommon>
+  	<#import "/common/common.macro.ftl" as netCommon>
 	<@netCommon.commonStyle />
     <!-- daterangepicker -->
     <link rel="stylesheet" href="${request.contextPath}/static/adminlte/bower_components/bootstrap-daterangepicker/daterangepicker.css">
@@ -13,7 +13,7 @@
 	<@netCommon.commonHeader />
 	<!-- left -->
 	<@netCommon.commonLeft "index" />
-	
+
 	<!-- Content Wrapper. Contains page content -->
 	<div class="content-wrapper">
 		<!-- Content Header (Page header) -->
@@ -132,7 +132,7 @@
 		<!-- /.content -->
 	</div>
 	<!-- /.content-wrapper -->
-	
+
 	<!-- footer -->
 	<@netCommon.commonFooter />
 </div>

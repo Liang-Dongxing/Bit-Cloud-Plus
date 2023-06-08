@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  	<#import "../common/common.macro.ftl" as netCommon>
+  	<#import "/common/common.macro.ftl" as netCommon>
 	<@netCommon.commonStyle />
 	<!-- DataTables -->
   	<link rel="stylesheet" href="${request.contextPath}/static/adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
@@ -13,17 +13,17 @@
 	<@netCommon.commonHeader />
 	<!-- left -->
 	<@netCommon.commonLeft "jobinfo" />
-	
+
 	<!-- Content Wrapper. Contains page content -->
 	<div class="content-wrapper">
 		<!-- Content Header (Page header) -->
 		<section class="content-header">
 			<h1>${I18n.jobinfo_name}</h1>
 		</section>
-		
+
 		<!-- Main content -->
 	    <section class="content">
-	    
+
 	    	<div class="row">
 	    		<div class="col-xs-3">
 	              	<div class="input-group">
@@ -66,7 +66,7 @@
 	            	<button class="btn btn-block btn-success add" type="button">${I18n.jobinfo_field_add}</button>
 	            </div>
           	</div>
-	    	
+
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="box">
@@ -100,7 +100,7 @@
 			</div>
 	    </section>
 	</div>
-	
+
 	<!-- footer -->
 	<@netCommon.commonFooter />
 </div>
