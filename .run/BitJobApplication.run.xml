@@ -2,6 +2,7 @@
   <configuration default="false" name="BitJobApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
     <module name="bit-job" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="com.bit.job.BitJobApplication" />
+    <option name="VM_PARAMETERS" value="--add-opens java.base/java.lang.reflect=ALL-UNNAMED" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>
